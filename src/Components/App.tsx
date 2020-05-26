@@ -1,8 +1,10 @@
 import React from "react";
 import "../Styles/App.css";
 import styled from "styled-components";
-import { Router } from "react-router";
 import { Header } from "./Header";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Designs } from "../Pages/Designs";
+import { AboutMe } from "../Pages/Aboutme";
 
 const AppWrapperDiv = styled.div`
   height: 100vh;
@@ -13,7 +15,17 @@ const AppWrapperDiv = styled.div`
 export const App = () => {
   return (
     <AppWrapperDiv>
-      <Header />
+      <BrowserRouter>
+        <Header />
+        <Switch>
+          <Route path="/designs">
+            <Designs />
+          </Route>
+          <Route path="/aboutme">
+            <AboutMe />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </AppWrapperDiv>
   );
 };

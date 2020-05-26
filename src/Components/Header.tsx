@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "../Assets/logo.png";
+import { Link } from "react-router-dom";
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -21,19 +22,26 @@ const IconImg = styled.img`
   margin-right: 30px;
 `;
 
-const Link = styled.a`
+const LinkSpan = styled.span`
   text-decoration: none;
+  text-underline-position: unset;
   color: white;
-  margin: 10px;
+  margin: 0px 20px;
 `;
 
 export const Header = () => {
   return (
     <HeaderWrapper>
-      <IconImg src={logo} alt="logo" />
+      <Link to="/">
+        <IconImg src={logo} alt="logo" />
+      </Link>
       <LinkWrapperDiv>
-        <Link href="/designs">Designs</Link>
-        <Link href="/aboutme">Über Mich</Link>
+        <Link to="/designs" style={{ textDecoration: "none" }}>
+          <LinkSpan>Designs</LinkSpan>
+        </Link>
+        <Link to="/aboutme" style={{ textDecoration: "none" }}>
+          <LinkSpan>Über Mich</LinkSpan>
+        </Link>
       </LinkWrapperDiv>
     </HeaderWrapper>
   );
