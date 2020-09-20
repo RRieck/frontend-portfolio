@@ -1,10 +1,10 @@
 import React from "react";
-import "../Styles/App.css";
+import "../styles/App.css";
 import styled from "styled-components";
 import { Header } from "./Header";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
-import { Designs } from "../Pages/Designs";
-import { AboutMe } from "../Pages/Aboutme";
+import { Designs } from "../pages/designs";
+import { AboutMe } from "../pages/aboutme";
 
 const AppWrapperDiv = styled.div`
   height: 100vh;

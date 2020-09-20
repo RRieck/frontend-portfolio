@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import aboutmeImage from "../../Assets/aboutme.png";
+import aboutmeImage from "../../assets/aboutme.png";
 
 const AboutMeWrapperDiv = styled.div`
   padding: 100px 10px;
@@ -27,6 +27,7 @@ const PersonalTextWrapperDiv = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  font-size: 1rem
 `;
 
 const AboutMeImage = styled.img`
@@ -51,7 +52,7 @@ export const AboutMe = () => {
           Hallo, schön das du dich hierhin verirrt hast 😛
         </TextblockP>
         <TextblockP>
-          Ich bin Ron und ein passionierter Entwickler im Frontend. Ich begann
+          Ich bin Ron und ein passionierter Frontend-Entwickler. Ich begann
           2016 mit meiner Ausbildung als Fachinformatiker für
           Anwendungsentwicklung. Seitdem hatte ich die Möglichkeit in jegliche
           Bereiche der Softwareentwicklung zu schauen. Was mich jedoch am
